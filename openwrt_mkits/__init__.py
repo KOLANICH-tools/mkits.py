@@ -1,9 +1,12 @@
 import typing
 from pathlib import Path
+from warnings import warn
 
 from fdt import Node, PropStrings, PropWords, FDT
 
 __all__ = ("genITS", "__copyright__")
+
+warn("We have moved from M$ GitHub to https://codeberg.org/KOLANICH-tools/mkits.py , read why on https://codeberg.org/KOLANICH/Fuck-GuanTEEnomo .")
 
 __copyright__ = """
 Licensed under the terms of the GNU GPL License version 3 or later.
