@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.2.0", "setuptools_scm[toml]>=3.4.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mkits"
+readme = "ReadMe.md"
+description = "A rewrite of OpenWRT mkits.sh into python"
+authors = [{name = "KOLANICH"}]
+classifiers = [
+	"Development Status :: 4 - Beta",
+	"Environment :: Other Environment",
+	"Intended Audience :: Developers",
+	"License :: OSI Approved",
+	"License :: OSI Approved :: GNU General Public License (GPL)",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3 :: Only",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["mkits", "OpenWRT"]
+license = {text = "GPL-3.0-or-later"}
+requires-python = ">=3.4"
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://codeberg.org/KOLANICH-libs/openwrt_mkits.py"
+
+[project.scripts]
+mkits = "openwrt_mkits.__main__:CLI.run"
+
+[tool.setuptools]
+zip-safe = true
+
+[tool.setuptools.packages.find]
+include = ["openwrt_mkits", "openwrt_mkits.*"]
+
+[tool.setuptools_scm]
